@@ -62,7 +62,7 @@ I used files and resources provided by BCS : GitLab repo UTOR-VIRT-FSF-PT-04-202
 
 
 - - -
-Authors Notes:
-This README and accompanying repo have been brought to you by:<br>
-© Sam Azimi - 2023 CodeCamp Studen. 
+### Authors Notes:<br>
+_This README and accompanying repo have been brought to you by:_<br>
+© Sam Azimi - 2023 CodeCamp Studen.<br> 
 Confidential and Proprietary. All Rights Reserved.
