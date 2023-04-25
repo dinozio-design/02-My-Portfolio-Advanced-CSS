@@ -6,10 +6,19 @@
 
 In this week's Challenge! I'll create a web application from scratch! It will be a portfolio page, which I will add to as the course progresses. 
 
-To create this portfolio, I will employ some advanced CSS techniques, such as: 
+To create a responsive design this portfolio, I will employ some advanced CSS techniques, such as: 
 * flexbox, 
-* media queries, and 
-* CSS variables.
+* media queries,  
+* CSS variables,
+* Resets and Typography,
+* Pseudo elements,
+* Custom Forms,
+* CSS selectors, and
+* Variables.
+
+To begin with, I'll use google slides to wireframe the flow of my application. Here is a mockup of what it looked like:<br>
+![Wireframe](./#) 
+
 
 **Note:** In liue of web applications to showcase at this point, I use placeholder images and names. 
 
