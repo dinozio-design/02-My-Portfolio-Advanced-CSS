@@ -39,7 +39,7 @@ Here are the critical requirements necessary to develop a portfolio that satisfi
 ```
 GIVEN I need to sample a potential employee's previous work
 WHEN I load their portfolio                                         [TO DO: deployed link to load portfolio]
-THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+THEN I am presented with the developer's name [DONE], a recent photo or avatar [DONE], and links to sections about them [DONE], their work [Lipsum DONE], and how to contact them
 WHEN I click one of the links in the navigation
 THEN the UI scrolls to the corresponding section
 WHEN I click on the link to the section about their work
@@ -61,9 +61,9 @@ The following animation shows the web application's appearance and functionality
 
 
 ## My Work
-1. You can find the URL of my deployed application **here:** <br>![deployed application link](./#)
+1. You can find the URL of my deployed application **here:** <br>[02-My-Portfolio-Advanced-CSS - link](https://dinozio-design.github.io/02-My-Portfolio-Advanced-CSS)
 
-2. You can find the URL of my GitHub repository that contains this code **here:** <br>![GitHub Repo link](./#)
+2. You can find the URL of my GitHub repository that contains this code **here:** <br>[GitHub Repo - link](https://github.com/dinozio-design/02-My-Portfolio-Advanced-CSS.git)
 
 
 ## References
