@@ -1,13 +1,14 @@
 /* setting up the root style */
 *{
+    /* my variables */
     --main-bordr-color: black;
     --main-bordr-style: solid;
     --main-bordr-width: medium;
     --main-border-radius: 0px;
     --main-bckgrnd: white;
     --main-color: darkblue;
-    box-sizing: border-box;
     
+    box-sizing: border-box;
 }
 
 /* overall setyle of the document */
@@ -24,12 +25,17 @@ header {
     background: var(--main-bckgrnd);
     color: var(--main-color);
     padding: 40px 60px;
+    background-image: url(../Images/headder-img.PNG);
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
 }
 
 header img{
-    padding: 20px;
+    padding: 15px;
     display: block;
-    
 }
 
 h1{
@@ -42,14 +48,20 @@ h2{
     font-size: large;
     padding: 10px 5px;
 }
+
 nav{
     display:flex;
     justify-content: flex-end;
 }
 
 nav li{
-    display: inline;
+    display: inline-block;
     padding: 10px;
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
 }
 
 main{
@@ -61,14 +73,17 @@ section {
     padding: 35px;
 }
 
-/* footer{
 
-} */
+footer{
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+}
+
+
 /* settin up myWork section with its containers */
-/* .myWork {
-    display: flex;
-    align-content:space-around;
-} */
+
 .container {
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
@@ -79,12 +94,14 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+/* update to variables */
 .card {
     border-style: solid;
     border-width: 1px;
     margin:1em;
-    /* padding: -10px;
-    float: left; */
+    padding: -10px;
+    float: left; 
     width: 25em;
     height: 25em;
     background-size:contain;
@@ -93,31 +110,28 @@ section {
     background-attachment: local;
 
     background-color:lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
 
 }
 
-/* .card h3 {
-    padding: 20px;
-} */
-/* 
-.card img{
-    width: 100%;
-    height: 100%;
-} */
 
+/* fix the code to correct its position */
 .cardBox{
-    margin-top: -50em;
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
     width: 10em;
-    /* position: absolute; */
 }
-.hiddenText{
-    visibility: collapse;
+.card p {
+    /* visibility: hidden; */
+    background-color: lightgrey;
 }
+
 .contactMe {
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
@@ -127,16 +141,19 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .contactMe img {
     position: relative;
-    padding-right: 3em;
+    padding: 0 3em;
     height: 9em;
 }
 .contactInfo{
     padding:10px 3em;
     margin: 20px;
 }
+
+/* id calls */
 #card-1{
     background-image: url(../Images/IMG_01.JPG);
 }
@@ -152,3 +169,58 @@ section {
 #card-5{
     background-image: url(../Images/IMG_05.JPG);
 }
+
+/* pseudo classes and elements go here */
+
+.brk:hover{
+    font-style: italic;
+}
+
+span[data-descr] {
+    position: relative;
+    cursor: help;
+}
+
+span[data-descr]:hover::after,
+
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 4em;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+
+button:hover{
+    position: relative;
+    cursor: help;
+    border-color: red;
+}
+
+button:hover::after,
+button:hover::after{
+    position: absolute;
+    left: 4em;
+    top: 24px;
+    min-width: 200px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #ffffcc;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+}
+button:active{
+    border-color: purple;
+}
+
+/* media querries */
+
