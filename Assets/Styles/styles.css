@@ -1,0 +1,80 @@
+/* setting up the root style */
+*{
+    --main-bordr-color: black;
+    --main-bordr-style: solid;
+    --main-bordr-width: medium;
+    --main-border-radius: 0px;
+    --main-bckgrnd: white;
+    --main-color: darkblue;
+    box-sizing: border-box;
+    
+}
+
+/* overall setyle of the document */
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+    padding: 40px 60px;
+}
+
+header img{
+    padding: 20px;
+    display: block;
+    
+}
+
+h1{
+    font-size: x-large;
+    padding: 10px;
+/* 
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);     */
+}
+
+nav{
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav li{
+    display: inline;
+    padding: 10px;
+}
+
+main{
+
+}
+
+footer{
+
+}
+
+/* settin up myWork section with its containers */
+.container {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    float: left;
+    width: 25%;
+}
+
+.container h3 {
+    padding: 20px;
+}
+
+.container img{
+  width: 100%;
+}
+
