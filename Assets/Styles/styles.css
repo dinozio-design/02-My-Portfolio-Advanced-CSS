@@ -77,6 +77,7 @@ section {
     color: var(--main-color);
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .card {
     border-style: solid;
@@ -88,8 +89,11 @@ section {
     height: 25em;
     background-size:contain;
     background-repeat: no-repeat;
-    background-position:top;
+    background-position:center;
     background-attachment: local;
+
+    background-color:lightgrey;
+
 }
 
 /* .card h3 {
@@ -120,11 +124,19 @@ section {
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .contactMe img {
     position: relative;
+    padding-right: 3em;
+    height: 9em;
 }
-
+.contactInfo{
+    padding:10px 3em;
+    margin: 20px;
+}
 #card-1{
     background-image: url(../Images/IMG_01.JPG);
 }
