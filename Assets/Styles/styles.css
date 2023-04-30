@@ -34,15 +34,14 @@ header img{
 
 h1{
     font-size: x-large;
-    padding: 10px;
-/* 
-    border-color: var(--main-bordr-color);
-    border-style: var(--main-bordr-style);
-    border-width: var(--main-bordr-width);
-    background: var(--main-bckgrnd);
-    color: var(--main-color);     */
+    padding: 20px;
+
 }
 
+h2{
+    font-size: large;
+    padding: 10px;
+}
 nav{
     display:flex;
     justify-content: flex-end;
@@ -52,16 +51,24 @@ nav li{
     display: inline;
     padding: 10px;
 }
-/* 
-main{
 
-} */
+main{
+    display: grid;
+    
+}
+
+section {
+    padding: 35px;
+}
 
 /* footer{
 
 } */
-
 /* settin up myWork section with its containers */
+.myWork {
+    display: flex;
+    align-content: flex-start;
+}
 .container {
     border-style: solid;
     border-width: 1px;
@@ -75,6 +82,16 @@ main{
 }
 
 .container img{
-  width: 100%;
+    width: 100%;
 }
 
+.contactMe {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+}
+.contactMe img {
+    position: relative;
+}
