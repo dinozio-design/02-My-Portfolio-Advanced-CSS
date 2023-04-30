@@ -10,45 +10,78 @@
     <header>
         <section class="myAvatar">
             <h1>My Portfolio | Sam Azimi</h1>           
-            <img src="#" alt="avatar goes here">
+            <img src="./Assets/Images/myAvaLookRight.PNG" alt="my logo avatar">
         </section>
         <nav>
             <ul>
-                <li class="link1"><a href="#">About Me</a></li>
-                <li class="link2"><a href="#">My Work</a></li>
-                <li class="link3"><a href="#">Contact Me</a></li>
-                <li class="link4"><a href="#">Resume</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#myWork">My Work</a></li>
+                <li><a href="#contactMe">Contact Me</a></li>
+                <li><a href="#myResume">My Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <div class="abutMe">
+        <section class="abutMe" id="aboutMe">
                 <h2>About Me:</h2>
+                <article>Lorem ipsum dolor sit amet. Sed aliquid dolorem ad fuga quia ut illo quidem sit temporibus similique ea nihil dolorem 33 nulla mollitia eos fugiat dolor! Ut eligendi doloribus aut natus magni cum repellendus ipsa non necessitatibus molestias. Est corrupti voluptas sit praesentium quia vel veritatis tempore ut nostrum tempore.<br><br>Vel odit doloribus et illo quibusdam ut obcaecati velit et nihil dicta et numquam omnis cum voluptatum excepturi. In exercitationem tempore cum repellat distinctio eum voluptas omnis rem vero porro. Et aperiam corporis ut illum voluptas ut ratione dolore.</article>
+        </section>
+        <!-- myWork section will have a different style and will stay on top of the page, word wrap and paragraphs -->
+        <section class="myWOrk" id="myWork">
+            <h2>My Work:</h2>
+            <div class ="container" id="container-1">
+                <h3>container 1</h3>
+                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
+                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
+
+            </div>
+            <div class ="container" id="container-2">
+                <h3>container 2</h3>
+                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
+                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
+
+            </div>
+            <div class ="container" id="container-3">
+                <h3>container 3</h3>
+                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
+                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
+
+            </div>
+            <div class ="container" id="container-4">
+                <h3>container 4</h3>
+                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
+                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
+
+            </div>
+            <div class ="container" id="container-5">
+                <h3>container 5</h3>
+                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
+                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
 
             </div>
         </section>
-        <section>
-            <div class="myWOrk">
-                <h2>My Work:</h2>
-            </div>
-        </section>
         <!-- this is a hidden section with more information about each work, each work is clicked, then this section is populated with the sctipt -->
-        <section>
-            <div class="seeMore"></div>
-        </section>
-        <section>
-            <div class="Contact Me:">
+        <!-- <section>
+            <div class="seeMore" id="seeMore"></div>
+        </section> -->
+        <section class="contactMe" id="contactMe">
+            <div>
                 <h2>Contact Me:</h2>
+                <p>Email me at: <a href="mailto:sam@dinozio.design"> sam@dinozio.design</a></p>
+                <p>By Phone: <a href="tel:+***-678-****">+***-678-****</a></p>
+                <p>GitHub: <a href="https://">https://#</a></p>
             </div>
+            <img src="./Assets/Images/myAvaLookLeft.PNG" alt="My Avatar again">
         </section>
         <section>
-            <div class="My Resume">
-                <h2>My Resume:</h2>
-            </div>
+            
         </section>
     </main>
     <footer>
+        <div class="myResume" id="myResume">
+            <h4>My Resume:</h4>
+            <p>It is still a work in progress, in the meanwhile feel free to check out my linkedIn <a href="https://">https://</a></p>
+        </div>
         <p>This web app is brought to you by:<br>© Sam Azimi - 2023 CodeCamp Studen.<br>Confidential and Proprietary. All Rights Reserved.</p>
     </footer>
 </body>
