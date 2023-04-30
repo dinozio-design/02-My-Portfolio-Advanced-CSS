@@ -40,7 +40,7 @@ h1{
 
 h2{
     font-size: large;
-    padding: 10px;
+    padding: 10px 5px;
 }
 nav{
     display:flex;
@@ -65,26 +65,55 @@ section {
 
 } */
 /* settin up myWork section with its containers */
-.myWork {
+/* .myWork {
     display: flex;
-    align-content: flex-start;
-}
+    align-content:space-around;
+} */
 .container {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
     border-style: solid;
     border-width: 1px;
-    padding: 10px;
-    float: left;
-    width: 25%;
+    margin:1em;
+    /* padding: -10px;
+    float: left; */
+    width: 25em;
+    height: 25em;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:top;
+    background-attachment: local;
 }
 
-.container h3 {
+/* .card h3 {
     padding: 20px;
-}
-
-.container img{
+} */
+/* 
+.card img{
     width: 100%;
-}
+    height: 100%;
+} */
 
+.cardBox{
+    margin-top: -50em;
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+    width: 10em;
+    /* position: absolute; */
+}
+.hiddenText{
+    visibility: collapse;
+}
 .contactMe {
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
@@ -94,4 +123,20 @@ section {
 }
 .contactMe img {
     position: relative;
+}
+
+#card-1{
+    background-image: url(../Images/IMG_01.JPG);
+}
+#card-2{
+    background-image: url(../Images/IMG_02.JPG);
+}
+#card-3{
+    background-image: url(../Images/IMG_03.JPG);
+}
+#card-4{
+    background-image: url(../Images/IMG_04.JPG);
+}
+#card-5{
+    background-image: url(../Images/IMG_05.JPG);
 }
