@@ -4,9 +4,9 @@
 
 ## Description
 
-In this week's Challenge! I'll create a web application from scratch! It will be a portfolio page, which I will add to as the course progresses. 
+In this week's Challenge! I created a web application from scratch! It will be a portfolio page, to which I will add as the course progresses. 
 
-To create a responsive design this portfolio, I will employ some advanced CSS techniques, such as: 
+To create a responsive design this portfolio, I used some advanced CSS techniques, such as: 
 * flexbox, 
 * media queries,  
 * CSS variables,
@@ -16,8 +16,8 @@ To create a responsive design this portfolio, I will employ some advanced CSS te
 * CSS selectors, and
 * Variables.
 
-To begin with, I'll use google slides to wireframe the flow of my application. Here is a mockup of what it looked like:<br>
-![Wireframe](./#) 
+To begin with, I used my sketch book to wireframe the flow of my application for the given **_User Story_** below. Here is a mockup of what it looked like:<br><br>
+![Wireframe](./Assets/Images/WireFrame.PNG) 
 
 
 **Note:** In liue of web applications to showcase at this point, I use placeholder images and names. 
@@ -38,7 +38,7 @@ Here are the critical requirements necessary to develop a portfolio that satisfi
 
 ```
 GIVEN I need to sample a potential employee's previous work
-WHEN I load their portfolio
+WHEN I load their portfolio                                         [TO DO: deployed link to load portfolio]
 THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
 WHEN I click one of the links in the navigation
 THEN the UI scrolls to the corresponding section
@@ -57,7 +57,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 The following animation shows the web application's appearance and functionality:
 
-![portfolio demo](./Assets/02-advanced-css-homework-demo.gif)
+![portfolio demo](./Assets/Images/02-advanced-css-homework-demo.gif)
 
 
 ## My Work
