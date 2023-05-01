@@ -1,7 +1,10 @@
 /* reseting the box size of every element  */
-*{
+*, 
+*:before,
+*:after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Giving the body element a parent height to compare against */
