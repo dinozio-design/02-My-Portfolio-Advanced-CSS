@@ -189,18 +189,23 @@ footer{
 /* id calls */
 #card-1{
     background-image: url(../Images/IMG_01.JPG);
+    
 }
 #card-2{
     background-image: url(../Images/IMG_02.JPG);
+    
 }
 #card-3{
     background-image: url(../Images/IMG_03.JPG);
+    
 }
 #card-4{
     background-image: url(../Images/IMG_04.JPG);
+    
 }
 #card-5{
     background-image: url(../Images/IMG_05.JPG);
+    
 }
 
 /* pseudo classes and elements go here */
@@ -219,12 +224,15 @@ span[data-descr]:hover::after,
 span[data-descr]:focus::after {
   content: attr(data-descr);
   position: absolute;
-  left: 4em;
-  top: 24px;
+  left: 50%;
+  top: 5rem;
   min-width: 200px;
   border: 1px #aaaaaa solid;
   border-radius: 10px;
   background-color: #ffffcc;
+  background-image:linear-gradient(  
+    rgba(236, 237, 201, 0.895) 0%,
+  rgba(182, 244, 132, 0.948) 100%);
   padding: 12px;
   color: #000000;
   font-size: 14px;
@@ -252,7 +260,7 @@ button:hover::after{
     content: attr(data-descr);
     position: absolute;
     left: 4em;
-    top: 24px;
+    top: 3em;
     min-width: 200px;
     border: 1px #aaaaaa solid;
     border-radius: 10px;
@@ -268,4 +276,62 @@ button:active{
 
 /* media querries */
 
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+    /* nav to stack on top of each other */
+    /* nave with light color background */
+    /* myWOrk container padding and margins */
+    /* smooth transition effects */
+    /* All borders and colors */
+    h1 {
+        text-align: center;
+        padding: 20px 80px; 
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    header {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }  
+    header img{
+        padding: 5rem;
+    }
+    nav{
+        display:block;
+        justify-content: flex-end;
+    }
+ 
+    nav li{
+        display: block;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 3rem;
+        padding: 10px;
+        border-color: var(--main-bordr-color);
+        border-style: var(--main-bordr-style);
+        border-width: var(--main-bordr-width);
+        background: var(--main-bckgrnd);
+        color: var(--main-color);
+}
+    .contactMe {
+        /* image position */
+        /* content centre */
+        justify-content: center;
+
+    }
+    footer {
+        /* justify content */
+        
+    }
+    span[data-descr]:focus::after {
+        /* content: attr(data-descr); */
+        position: absolute;
+        left: 60rem;
+        top: 20rem;
+    }
+}
 
