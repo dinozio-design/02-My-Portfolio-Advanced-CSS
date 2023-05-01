@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Assets/Styles/reset.css">
     <link rel="stylesheet" href="./Assets/Styles/styles.css">
+    <script defer src="./Assets/Scripts/script.js"></script>
     <title>My Portfolio | Sam Azimi</title>
 </head>
 <body>
@@ -33,34 +34,35 @@
             <h2>My Work:</h2>
             <div class="container">
                 <div class ="card" id="card-1">
-                    <button class="cardBox" data-descr="Click to see more!">
-                        <h3>card 1</h3>
+                    <button class="cardBox" id="btn-1" data-descr="Double click to see more!" onclick="seeMoreInfo1();">
+                        <h3>My Best Work</h3>
                     </button>
-                    <p class = "seeMore">Et velit placeat et sapiente vitae non enim dolore</p>
+                    <!-- experimenting with multiple class declaration to perhaps set up a toggle subroutin to toggle text visibility -- RESULTS: it worked, yay. -->
+                    <p class = "seeMore" id="seeMore-1">This is my best work so far. <a href="https://dinozio-design.github.io/02-My-Portfolio-Advanced-CSS">Click to see</a>. <br>You can also see the associated repo on <a href="https://github.com/dinozio-design/02-My-Portfolio-Advanced-CSS.git">GitHub</a>. </p>
                 </div>
                 <div class ="card" id="card-2">
-                    <button class="cardBox" data-descr="Click to see more!">
+                    <button class="cardBox" id="btn-2" data-descr="Double click to see more!" onclick="seeMoreInfo2();">
                         <h3>card 2</h3>
                     </button>
-                    <p class = "seeMore">Et velit placeat et sapiente vitae non enim dolore</p>
+                    <p class = "seeMore" id="seeMore-2">Et velit placeat et sapiente vitae non enim dolore</p>
                 </div>
                 <div class ="card" id="card-3">
-                    <button class="cardBox" data-descr="Click to see more!">
+                    <button class="cardBox" id="btn-3" data-descr="Double click to see more!" onclick="seeMoreInfo3();">
                         <h3>card 3</h3>
                     </button>
-                    <p class = "seeMore">Et velit placeat et sapiente vitae non enim dolore</p>
+                    <p class = "seeMore" id="seeMore-3">Et velit placeat et sapiente vitae non enim dolore</p>
                 </div>
                 <div class ="card" id="card-4">
-                    <button class="cardBox" data-descr="Click to see more!">
+                    <button class="cardBox" id="btn-4" data-descr="Double click to see more!" onclick="seeMoreInfo4();">
                         <h3>card 4</h3>
                     </button>
-                    <p class = "seeMore">Et velit placeat et sapiente vitae non enim dolore</p>
+                    <p class = "seeMore" id="seeMore-4">Et velit placeat et sapiente vitae non enim dolore</p>
                 </div>
                 <div class ="card" id="card-5">
-                    <button class="cardBox" data-descr="Click to see more!">
+                    <button class="cardBox" id="btn-5" data-descr="Double click to see more!" onclick="seeMoreInfo5();">
                         <h3>card 5</h3>
                     </button>
-                    <p class = "seeMore">Et velit placeat et sapiente vitae non enim dolore</p>
+                    <p class = "seeMore" id="seeMore-5">Et velit placeat et sapiente vitae non enim dolore</p>
                 </div>
             </div>
         </section>
@@ -83,5 +85,6 @@
         </div>
         <p>This web app is brought to you by:<br>© Sam Azimi - 2023 CodeCamp Studen.<br>Confidential and Proprietary. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>

@@ -45,7 +45,7 @@ THEN the UI scrolls to the corresponding section [done]
 WHEN I click on the link to the section about their work
 THEN the UI scrolls to a section with titled images of the developer's applications [done]
 WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others [TODO]: implementin flex-grow
+THEN that application's image should be larger in size than the others [done]: implementin flex-grow
 WHEN I click on the images of the applications
 THEN I am taken to that deployed application [TODO]: git hub repos and other deployed applications
 WHEN I resize the page or view the site on various screens and devices
