@@ -322,12 +322,13 @@ button:active{
         /* image position */
         /* content centre */
         justify-content: center;
-
     }
+    /* 
     footer {
-        /* justify content */
+        justify content
         
     }
+     */
     span[data-descr]:focus::after {
         /* content: attr(data-descr); */
         position: absolute;
