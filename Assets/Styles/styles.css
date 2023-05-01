@@ -12,10 +12,10 @@
 
     --mobile-bordr-color: black;
     --mobile-bordr-style: solid;
-    --mobile-bordr-width: medium;
-    --mobile-border-radius: 0px;
-    --mobile-bckgrnd: white;
-    --mobile-color: darkblue;
+    --mobile-bordr-width: Small;
+    --mobile-border-radius: 5x;
+    --mobile-bckgrnd: rgb(246, 244, 241);
+    --mobile-color: rgba(0, 0, 139, 0.779);
     
     
 }
@@ -311,11 +311,12 @@ button:active{
         line-height: 4rem;
         font-size: 3rem;
         padding: 10px;
-        border-color: var(--main-bordr-color);
-        border-style: var(--main-bordr-style);
-        border-width: var(--main-bordr-width);
-        background: var(--main-bckgrnd);
-        color: var(--main-color);
+        border-color: var(--mobile-bordr-color);
+        border-style: var(--mobile-bordr-style);
+        border-width: var(--mobile-bordr-width);
+        border-radius: var(--mobile-border-radius);
+        background: var(--mobile-bckgrnd);
+        color: var(--mobile-color);
 }
     .contactMe {
         /* image position */
