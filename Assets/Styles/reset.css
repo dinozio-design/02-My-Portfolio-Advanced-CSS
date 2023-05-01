@@ -1,4 +1,4 @@
-/* reseting the box size of every element  */
+/* CLASS NOTES: reseting the box size of every element  */
 *, 
 *:before,
 *:after {
@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/* Giving the body element a parent height to compare against */
+/* CLASS NOTES: Giving the body element a parent height to compare against */
 html{
     height: 100%;
 }

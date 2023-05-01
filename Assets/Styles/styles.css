@@ -7,24 +7,62 @@
     --main-border-radius: 0px;
     --main-bckgrnd: white;
     --main-color: darkblue;
+    --card-bckgrnd: lightgrey;
+
+
+    --mobile-bordr-color: black;
+    --mobile-bordr-style: solid;
+    --mobile-bordr-width: medium;
+    --mobile-border-radius: 0px;
+    --mobile-bckgrnd: white;
+    --mobile-color: darkblue;
     
-    box-sizing: border-box;
+    
 }
 
 /* overall setyle of the document */
 
+html{
+    /* CLASS NOTE: set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+}
+
 body {
-    font-family: Arial;
-    margin: 0;
+    /* CLASS NOTES: Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 4rem;
+    /* font-size: 4rem; */
+    padding: 20px;
+
+}
+
+h2{
+    font-size: 3rem;
+    padding: 10px 5px;
+}
+
+h3 {
+    font-size: 2.25rem;
 }
 
 header {
+    /* border style */
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
+
     padding: 40px 60px;
+
+    /* background image style */
     background-image: url(../Images/headder-img.PNG);
     background-size:contain;
     background-position: right;
@@ -36,17 +74,6 @@ header {
 header img{
     padding: 15px;
     display: block;
-}
-
-h1{
-    font-size: x-large;
-    padding: 20px;
-
-}
-
-h2{
-    font-size: large;
-    padding: 10px 5px;
 }
 
 nav{
@@ -66,6 +93,8 @@ nav li{
 
 main{
     display: grid;
+    width: 96%;
+    margin: 2rem auto;
     
 }
 
@@ -75,6 +104,7 @@ section {
 
 
 footer{
+    margin: 2.5rem;
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -109,7 +139,7 @@ footer{
     background-position:center;
     background-attachment: local;
 
-    background-color:lightgrey;
+    background-color:var(--card-bckgrnd);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -127,9 +157,13 @@ footer{
     color: var(--main-color);
     width: 10em;
 }
-.card p {
+.seeMore {
     /* visibility: hidden; */
-    background-color: lightgrey;
+    background-color: var(--card-bckgrnd);
+    width: 100%;
+    padding: 1rem;
+
+
 }
 
 .contactMe {
@@ -206,6 +240,7 @@ button:hover{
 
 button:hover::after,
 button:hover::after{
+    content: attr(data-descr);
     position: absolute;
     left: 4em;
     top: 24px;
