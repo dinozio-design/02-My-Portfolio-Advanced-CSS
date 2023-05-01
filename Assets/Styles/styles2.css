@@ -5,12 +5,23 @@
     --mobile-bordr-color: white;
     --mobile-bordr-style: solid;
     --mobile-bordr-width: Small;
-    --mobile-border-radius: 5x;
+    --mobile-border-radius: 7x;
     --mobile-bckgrnd: black;
     --mobile-color: rgb(246, 244, 241);
     --mobile-anchor-color: #ed8df1 ;
     --mobile-headings-color: rgb(240, 156, 0);
 
+
+    /* desktop size min 992px */
+    --main-bordr-color: black;
+    --main-bordr-style: solid;
+    --main-bordr-width: medium;
+    --main-border-radius: 3px;
+    --main-bckgrnd: white;
+    --main-color: darkblue;
+    --card-bckgrnd: lightgrey;
+    --main-anchor-color: blue;
+    --main-headings-color: rgb(26, 0, 57);
 }
 
 
@@ -83,6 +94,18 @@ header {
     margin: 0 auto;
     padding: 2.5rem;
     text-align: center;
+
+
+}
+
+nav li{
+  display: block;
+  padding: 10px;
+  border-color: var(--mobile-bordr-color);
+  border-style: var(--mobile-bordr-style);
+  border-width: var(--mobile-bordr-width);
+  background: var(--mobile-bckgrnd);
+  color: var(--mobile-color);
 }
 
 main {
@@ -141,6 +164,7 @@ footer {
   'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
   'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
   monospace;
+  font-size: 0.95rem;
 }
 
 
@@ -149,6 +173,51 @@ footer {
 @media screen and (min-width: 768px) {
 
   /* on tablets, set columns to only be 50% of the width and not grow */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--main-headings-color);
+  }
+
+  a {
+    color: var(--main-anchor-color);
+  }
+  
+  header {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+
+    background-image: url(../Images/headder-img.PNG);
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+
+  nav li{
+    display: inline-block;
+    padding: 10px;
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+  }
+
+  .container {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+  }
+
   .card {
     flex: 0 0 50%;
     max-width: 50%;
@@ -160,11 +229,16 @@ footer {
 @media screen and (min-width: 992px) {
   header {
     width: 75%;
+
   }
 
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
   .card {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 0 0 33%;
+    max-width: 33%;
   }
 }
 
