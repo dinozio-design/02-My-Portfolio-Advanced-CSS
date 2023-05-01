@@ -2,19 +2,21 @@
 :root{
 
     /* initial colour and size set - for 576px or smaller */
-    --mobile-bordr-color: black;
+    --mobile-bordr-color: white;
     --mobile-bordr-style: solid;
     --mobile-bordr-width: Small;
     --mobile-border-radius: 5x;
     --mobile-bckgrnd: black;
     --mobile-color: rgb(246, 244, 241);
-    --anchor-color: orange;
+    --mobile-anchor-color: #ed8df1 ;
+    --mobile-headings-color: rgb(240, 156, 0);
 
 }
 
 
 html{
-    /* CLASS NOTE: set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    /* CLASS NOTE: set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) OR 4rem = 40px (4 * 10px) */
+    
     font-size: 62.5%;
 }
 
@@ -30,8 +32,107 @@ body {
     
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  color: var(--mobile-headings-color);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+h1 {
+    /* font-size: 4rem; */    padding: 1rem 1.2rem;
+    font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
 
 /* resetting the link colors */
-nav li a {
-    color: var(--anchor-color);
+a {
+      color: var(--mobile-anchor-color);
 }
+
+header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+main {
+    width: 96%;
+    margin: 2rem auto;
+}
+
+footer {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  justify-content: center;
+
+  /* outlining the container for now. may remove later */
+  border-color: var(--mobile-bordr-color);
+  border-style: var(--mobile-bordr-style);
+  border-width: var(--mobile-bordr-width);
+  background: var(--mobile-bckgrnd);
+  color: var(--mobile-color);
+
+}
+
+.card {
+  flex: 1 0 100%;
+  padding: 1.5rem;
+
+  /* addign smooth transition here */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+
+/* class calls */
+.seeMore {
+  /* experimenting with  Monospace font stack. unsure of it's impact on the links*/
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+  'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+  monospace;
+}
+
+
+
+
+
+
