@@ -10,6 +10,8 @@
     --mobile-color: rgb(246, 244, 241);
     --mobile-anchor-color: #ed8df1 ;
     --mobile-headings-color: rgb(240, 156, 0);
+    --mobile-shaddow-color: rgb(240, 156, 0);
+    
 
 
     /* desktop size min 992px */
@@ -107,11 +109,15 @@ nav{
 nav li{
   display: block;
   padding: 10px;
+  margin: 0.25rem;
   border-color: var(--mobile-bordr-color);
-  border-style: var(--mobile-bordr-style);
   border-width: var(--mobile-bordr-width);
   background: var(--mobile-bckgrnd);
   color: var(--mobile-color);
+  outline: 1px dashed;
+}
+nav li a{
+  text-decoration: none;
 }
 
 main {
@@ -176,7 +182,7 @@ footer {
   'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
   'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
   monospace;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   display: none;
   background-color: var(--mobile-bckgrnd);
   width: 100%;
@@ -220,7 +226,7 @@ border: 1px #aaaaaa solid;
 border-radius: 10px;
 background-color: #ffffcc;
 background-image:linear-gradient(  
-  rgba(236, 237, 201, 0.895) 0%,
+rgba(236, 237, 201, 0.895) 0%,
 rgba(182, 244, 132, 0.948) 100%);
 padding: 12px;
 color: #000000;
@@ -229,11 +235,13 @@ z-index: 1;
 }
 
 
+nav li:hover{
+  box-shadow: inset 0px 0px 8px var(--mobile-shaddow-color), 0 0 15px var(--mobile-shaddow-color);
+}
 
-.card:hover{
+.card-cont:hover{
   border-color: red;
-  flex-grow: 2;
-  /* align-self: center; */
+  box-shadow: inset 0px 0px 8px var(--mobile-shaddow-color), 0 0 15px var(--mobile-shaddow-color);
 }
 
 
@@ -315,6 +323,7 @@ button:active{
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
+    outline: none;
   }
 
   .container {
