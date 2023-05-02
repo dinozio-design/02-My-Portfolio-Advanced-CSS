@@ -135,9 +135,10 @@ footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-content: center;
   margin-left: -1.5rem;
   /* margin-right: -1.5rem; */
-  justify-content: center;
+  /* justify-content: center; */
 
   /* outlining the container for now. may remove later */
   /* border-color: var(--mobile-bordr-color);
@@ -148,8 +149,13 @@ footer {
 
 }
 
-.card {
+/* perhaps a futile attempt in making the first card element larger in size */
+.container:first-child {
   flex: 1 0 100%;
+}
+
+.card {
+  /* flex: 1 0 100%; */
   padding: 1.5rem;
 
   /* addign smooth transition here */
