@@ -1,29 +1,35 @@
-/* setting up the root style */
-*{
-    /* my variables */
+/* fresh slate for a clean style sheet, staying mindfull of Mobile First design practices */
+:root{
+
+    /* initial colour and size set - for 576px or smaller */
+    --mobile-bordr-color: white;
+    --mobile-bordr-style: solid;
+    --mobile-bordr-width: Small;
+    --mobile-border-radius: 7x;
+    --mobile-bckgrnd: black;
+    --mobile-color: rgb(246, 244, 241);
+    --mobile-anchor-color: #ed8df1 ;
+    --mobile-headings-color: rgb(240, 156, 0);
+    --mobile-shaddow-color: rgb(240, 156, 0);
+    
+
+
+    /* desktop size min 992px */
     --main-bordr-color: black;
     --main-bordr-style: solid;
     --main-bordr-width: medium;
-    --main-border-radius: 0px;
+    --main-border-radius: 3px;
     --main-bckgrnd: white;
     --main-color: darkblue;
-    --card-bckgrnd: lightgrey;
-
-
-    --mobile-bordr-color: black;
-    --mobile-bordr-style: solid;
-    --mobile-bordr-width: Small;
-    --mobile-border-radius: 5x;
-    --mobile-bckgrnd: rgb(246, 244, 241);
-    --mobile-color: rgba(0, 0, 139, 0.779);
-    
-    
+    --main-card-bckgrnd: lightgrey;
+    --main-anchor-color: blue;
+    --main-headings-color: rgb(26, 0, 57);
 }
 
-/* overall setyle of the document */
 
 html{
-    /* CLASS NOTE: set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    /* CLASS NOTE: set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) OR 4rem = 40px (4 * 10px) */
+    
     font-size: 62.5%;
 }
 
@@ -34,55 +40,288 @@ body {
     /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
     font-size: 1.75rem;
     line-height: 1.5;
+    color: var(--mobile-color);
+    background-color: var(--mobile-bckgrnd);
+    
 }
 
-h1{
-    font-size: 4rem;
-    /* font-size: 4rem; */
-    padding: 20px;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2rem;
+  margin-bottom: 0.9rem;
+  color: var(--mobile-headings-color);
+  font-weight: 500;
+  line-height: 1.1;
 }
 
-h2{
-    font-size: 3rem;
-    padding: 10px 5px;
+h1 {
+  padding: 1rem 1.2rem;
+  /* font-size: 4rem; */    
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    padding: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* resetting the link colors */
+a {
+      color: var(--mobile-anchor-color);
 }
 
 header {
-    /* border style */
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+
+
+}
+
+nav{
+  margin-top: 2rem;
+}
+nav li{
+  display: block;
+  padding: 10px;
+  margin: 0.25rem;
+  border-color: var(--mobile-bordr-color);
+  border-width: var(--mobile-bordr-width);
+  background: var(--mobile-bckgrnd);
+  color: var(--mobile-color);
+  outline: 1px dashed;
+}
+nav li a{
+  text-decoration: none;
+}
+
+main {
+    width: 96%;
+    margin: 2rem auto;
+}
+
+footer {
+    margin: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  margin-left: -1.5rem;
+  /* margin-right: -1.5rem; */
+  /* justify-content: center; */
+
+  /* outlining the container for now. may remove later */
+  /* border-color: var(--mobile-bordr-color);
+  border-style: var(--mobile-bordr-style);
+  border-width: var(--mobile-bordr-width); */
+  background: var(--mobile-bckgrnd);
+  color: var(--mobile-color);
+
+}
+
+/* perhaps a futile attempt in making the first card element larger in size */
+.container:first-child {
+  flex: 1 0 100%;
+}
+
+.card {
+  /* flex: 1 0 100%; */
+  padding: 1.5rem;
+
+  /* addign smooth transition here */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+.card-cont {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  min-height: 100%;
+  padding: 2rem;
+
+  outline: 2px dashed;
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgPlace {
+  max-width: 100%;
+}
+
+
+
+/* class calls */
+.seeMore {
+  /* experimenting with  Monospace font stack. unsure of it's impact on the links*/
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+  'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+  monospace;
+  font-size: 1.3rem;
+  display: none;
+  background-color: var(--mobile-bckgrnd);
+  width: 100%;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.contactMe {
+  border-color: var(--mobile-bordr-color);
+  border-style: var(--mobile-bordr-style);
+  border-width: var(--mobile-bordr-width);
+  background: var(--mobile-bckgrnd);
+  color: var(--mobile-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+/* id calls */
+
+/* pseudo classes and elements go here */
+.brk:hover{
+  font-style: italic;
+}
+
+span[data-descr] {
+  position: relative;
+  cursor: help;
+}
+
+span[data-descr]:hover::after,
+
+span[data-descr]:focus::after {
+content: attr(data-descr);
+position: absolute;
+left: 100%;
+top: 5rem;
+min-width: 200px;
+border: 1px #aaaaaa solid;
+border-radius: 10px;
+background-color: #ffffcc;
+background-image:linear-gradient(  
+rgba(236, 237, 201, 0.895) 0%,
+rgba(182, 244, 132, 0.948) 100%);
+padding: 12px;
+color: #000000;
+font-size: 14px;
+z-index: 1;
+}
+
+
+nav li:hover{
+  box-shadow: inset 0px 0px 8px var(--mobile-shaddow-color), 0 0 15px var(--mobile-shaddow-color);
+}
+
+.card-cont:hover{
+  border-color: red;
+  box-shadow: inset 0px 0px 8px var(--mobile-shaddow-color), 0 0 15px var(--mobile-shaddow-color);
+}
+
+
+
+button:hover{
+  position: relative;
+  cursor: help;
+  border-color: red;
+}
+
+button:hover::after,
+button:hover::after{
+  content: attr(data-descr);
+  position: absolute;
+  left: 4em;
+  top: 3em;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+button:active{
+  border-color: purple;
+}
+
+
+/* media queries using mobile-first approach */
+
+@media screen and (min-width: 768px) {
+
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  body{
+    color: var(--main-color);
+    background-color: var(--main-bckgrnd);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--main-headings-color);
+  }
+  h1{
+    text-align: left;
+    transition: 1s linear;
+  }
+
+  a {
+    color: var(--main-anchor-color);
+  }
+  
+  header {
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
+    text-align: center;
 
-    padding: 40px 60px;
-
-    /* background image style */
     background-image: url(../Images/headder-img.PNG);
     background-size:contain;
     background-position: right;
     background-repeat: no-repeat;
     background-position-y: center;
-    
-}
+    transition: .5s;
+  }
 
-header img{
-    padding: 15px;
-    display: block;
-}
-
-nav{
-    display:flex;
-    justify-content: flex-end;
-}
-
-nav li{
+  nav li{
     display: inline-block;
     padding: 10px;
     border-color: var(--main-bordr-color);
@@ -90,250 +329,62 @@ nav li{
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
-}
+    outline: none;
+  }
 
-main{
-    display: grid;
-    width: 96%;
-    margin: 2rem auto;
-    
-}
-
-section {
-    padding: 35px;
-}
-
-
-footer{
-    margin: 2.5rem;
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: justify;
-}
-
-
-/* settin up myWork section with its containers */
-
-.container {
-    border-color: var(--main-bordr-color);
+  .container {
+    /* border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
-    border-width: var(--main-bordr-width);
+    border-width: var(--main-bordr-width); */
     background: var(--main-bckgrnd);
     color: var(--main-color);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 
-/* update to variables */
-.card {
-    border-style: solid;
-    border-width: 1px;
-    margin:1em;
-    padding: -10px;
-    float: left; 
-    width: 25em;
-    height: 25em;
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position:center;
-    background-attachment: local;
+  .card {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
-    background-color:var(--card-bckgrnd);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-
-}
-
-
-/* fix the code to correct its position */
-.cardBox{
-    border-color: var(--main-bordr-color);
-    border-style: var(--main-bordr-style);
-    border-width: var(--main-bordr-width);
-    background: var(--main-bckgrnd);
-    color: var(--main-color);
-    width: 10em;
-}
-.seeMore {
+  .seeMore {
     display: none;
-    background-color: var(--card-bckgrnd);
-    width: 100%;
+    background-color: var(--main-card-bckgrnd);
     padding: 1rem;
-}
+  }
 
-.contactMe {
+  .contactMe {
     border-color: var(--main-bordr-color);
     border-style: var(--main-bordr-style);
     border-width: var(--main-bordr-width);
     background: var(--main-bckgrnd);
     color: var(--main-color);
+  }
+
+}
+
+/*  for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    text-align: left;
+  }
+  
+  nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.contactMe img {
-    position: relative;
-    padding: 0 3em;
-    height: 9em;
-}
-.contactInfo{
-    padding:10px 3em;
-    margin: 20px;
-}
+    justify-content: flex-end;
+  }
+  
+  footer{
+    text-align: justify;
+  }
 
-/* id calls */
-#card-1{
-    background-image: url(../Images/IMG_01.JPG);
-    
-}
-#card-2{
-    background-image: url(../Images/IMG_02.JPG);
-    
-}
-#card-3{
-    background-image: url(../Images/IMG_03.JPG);
-    
-}
-#card-4{
-    background-image: url(../Images/IMG_04.JPG);
-    
-}
-#card-5{
-    background-image: url(../Images/IMG_05.JPG);
-    
-}
+  .card {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
 
-/* pseudo classes and elements go here */
 
-.brk:hover{
-    font-style: italic;
-}
-
-span[data-descr] {
-    position: relative;
-    cursor: help;
-}
-
-span[data-descr]:hover::after,
-
-span[data-descr]:focus::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 50%;
-  top: 5rem;
-  min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
-  background-image:linear-gradient(  
-    rgba(236, 237, 201, 0.895) 0%,
-  rgba(182, 244, 132, 0.948) 100%);
-  padding: 12px;
-  color: #000000;
-  font-size: 14px;
-  z-index: 1;
 }
 
 
-
-.card:hover{
-    border-color: red;
-    flex-grow: 2;
-    align-self: center;
-}
-
-
-
-button:hover{
-    position: relative;
-    cursor: help;
-    border-color: red;
-}
-
-button:hover::after,
-button:hover::after{
-    content: attr(data-descr);
-    position: absolute;
-    left: 4em;
-    top: 3em;
-    min-width: 200px;
-    border: 1px #aaaaaa solid;
-    border-radius: 10px;
-    background-color: #ffffcc;
-    padding: 12px;
-    color: #000000;
-    font-size: 14px;
-    z-index: 1;
-}
-button:active{
-    border-color: purple;
-}
-
-/* media querries */
-
-/* Small smartphones - image placeholders change color */
-@media screen and (max-width: 576px) {
-    /* nav to stack on top of each other */
-    /* nave with light color background */
-    /* myWOrk container padding and margins */
-    /* smooth transition effects */
-    /* All borders and colors */
-    h1 {
-        text-align: center;
-        padding: 20px 80px; 
-    }
-    
-    h2 {
-        text-align: center;
-    }
-    header {
-        background-image: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }  
-    header img{
-        padding: 5rem;
-    }
-    nav{
-        display:block;
-        justify-content: flex-end;
-    }
- 
-    nav li{
-        display: block;
-        text-align: center;
-        line-height: 4rem;
-        font-size: 3rem;
-        padding: 10px;
-        border-color: var(--mobile-bordr-color);
-        border-style: var(--mobile-bordr-style);
-        border-width: var(--mobile-bordr-width);
-        border-radius: var(--mobile-border-radius);
-        background: var(--mobile-bckgrnd);
-        color: var(--mobile-color);
-}
-    .contactMe {
-        /* image position */
-        /* content centre */
-        justify-content: center;
-    }
-    /* 
-    footer {
-        justify content
-        
-    }
-     */
-    span[data-descr]:focus::after {
-        /* content: attr(data-descr); */
-        position: absolute;
-        left: 60rem;
-        top: 20rem;
-    }
-}
 
