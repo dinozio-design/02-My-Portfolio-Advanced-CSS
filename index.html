@@ -4,77 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Styles/reset.css">
+    <link rel="stylesheet" href="./Assets/Styles/styles.css">
+    <script defer src="./Assets/Scripts/script.js"></script>
     <title>My Portfolio | Sam Azimi</title>
 </head>
 <body>
     <header>
-        <section class="myAvatar">
-            <h1>My Portfolio | Sam Azimi</h1>           
-            <img src="./Assets/Images/myAvaLookRight.PNG" alt="my logo avatar">
-        </section>
+        <!-- <section class="myAvatar"> -->
+            <h1>My Portfolio<br><span class="brk" data-descr="This is a collection of work prepared by the developer, as part of UofT Coding Bootcamp.">Sam Azimi</span></h1>          
+            <img id="myAva" src="./Assets/Images/myAvaLookRight.PNG" alt="my logo avatar">
+        <!-- </section> -->
         <nav>
             <ul>
-                <li><a href="#aboutMe">About Me</a></li>
-                <li><a href="#myWork">My Work</a></li>
-                <li><a href="#contactMe">Contact Me</a></li>
-                <li><a href="#myResume">My Resume</a></li>
+                <li><a href="#aboutMe">&#8964About Me</a></li>
+                <li><a href="#myWork">&#8964My Work</a></li>
+                <li><a href="#contactMe">&#8964Contact Me</a></li>
+                <li><a href="#myResume">&#8964My Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="abutMe" id="aboutMe">
             <h2>About Me:</h2>
-            <article>Lorem ipsum dolor sit amet. Sed aliquid dolorem ad fuga quia ut illo quidem sit temporibus similique ea nihil dolorem 33 nulla mollitia eos fugiat dolor! Ut eligendi doloribus aut natus magni cum repellendus ipsa non necessitatibus molestias. Est corrupti voluptas sit praesentium quia vel veritatis tempore ut nostrum tempore.<br><br>Vel odit doloribus et illo quibusdam ut obcaecati velit et nihil dicta et numquam omnis cum voluptatum excepturi. In exercitationem tempore cum repellat distinctio eum voluptas omnis rem vero porro. Et aperiam corporis ut illum voluptas ut ratione dolore.</article>
+            <article>This is where you can know a little more about me. For now Lipsum will hold this place until such time when I get to articulate my bio properly. For now my interest and priority are more about the code! Thank you for being patient.<br><br>Lorem ipsum dolor sit amet. Sed aliquid dolorem ad fuga quia ut illo quidem sit temporibus similique ea nihil dolorem 33 nulla mollitia eos fugiat dolor! Ut eligendi doloribus aut natus magni cum repellendus ipsa non necessitatibus molestias. Est corrupti voluptas sit praesentium quia vel veritatis tempore ut nostrum tempore.<br><br>Vel odit doloribus et illo quibusdam ut obcaecati velit et nihil dicta et numquam omnis cum voluptatum excepturi. In exercitationem tempore cum repellat distinctio eum voluptas omnis rem vero porro. Et aperiam corporis ut illum voluptas ut ratione dolore.</article>
         </section>
         <!-- myWork section will have a different style and will stay on top of the page, word wrap and paragraphs -->
         <section class="myWOrk" id="myWork">
             <h2>My Work:</h2>
-            <div class ="container" id="container-1">
-                <h3>container 1</h3>
-                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
-                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
-            </div>
-            <div class ="container" id="container-2">
-                <h3>container 2</h3>
-                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
-                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
-            </div>
-            <div class ="container" id="container-3">
-                <h3>container 3</h3>
-                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
-                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
-            </div>
-            <div class ="container" id="container-4">
-                <h3>container 4</h3>
-                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
-                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
-            </div>
-            <div class ="container" id="container-5">
-                <h3>container 5</h3>
-                <img src="./Assets/Images/IMG_0.JPG" alt="container Image">
-                <p>Et velit placeat et sapiente vitae non enim dolore aut doloribus consectetur est dolor doloribus sit officiis totam ex rerum voluptas. Et eveniet optio et sapiente saepe et excepturi voluptas ab quod dolorem eum alias quae cum totam numquam id commodi fugit.</p>
+            <div class="container">
+                <div class ="card" id="card-1">
+                    <figure class="card-cont">
+                        <img class="imgPlace" src="./Assets/Images/IMG_01.JPG" alt="placeholder image">
+                        <button class="cardBox" id="btn-1" data-descr="Double click to see more!" onclick="seeMoreInfo1();">
+                            <h3>My Best Work Yet!</h3>
+                        </button>
+                        <!-- experimenting with multiple class declaration to perhaps set up a toggle subroutin to toggle text visibility -- RESULTS: it worked, yay. -->
+                        <p class = "seeMore" id="seeMore-1">This is my best work so far.<br> You can <a href="https://dinozio-design.github.io/02-My-Portfolio-Advanced-CSS">see my deployed app here.</a>. <br>You can also see the associated repo on <a href="https://github.com/dinozio-design/02-My-Portfolio-Advanced-CSS.git">GitHub</a>. </p>
+                    </figure>
+                </div>
+                <div class ="card" id="card-2">
+                    <figure class="card-cont">
+                        <img class="imgPlace" src="./Assets/Images/IMG_02.JPG" alt="placeholder image">
+                        <button class="cardBox" id="btn-2" data-descr="Double click to see more!" onclick="seeMoreInfo2();">
+                            <h3>My First Challenge</h3>
+                        </button>
+                        <p class = "seeMore" id="seeMore-2">This was my very first class challenge. It was ment to mimick an "On The Job Ticket" to refactor a code written by others. <br>You can <a href="https://dinozio-design.github.io/challenge-0102/">see my deployed app here.</a>. <br>You can also see the associated repo on <a href="https://github.com/dinozio-design/challenge-0102.git">GitHub</a>.</p>
+                    </figure>
+                </div>
+                <div class ="card" id="card-3">
+                    <figure class="card-cont">
+                        <img class="imgPlace" src="./Assets/Images/IMG_03.JPG" alt="placeholder image">
+                        <button class="cardBox" id="btn-3" data-descr="Double click to see more!" onclick="seeMoreInfo3();">
+                            <h3>Pre-Work Stuff</h3>
+                        </button>
+                        <p class = "seeMore" id="seeMore-3">For almost a month before the start of BootCamp, I began doing the prework readings and activities. <br>You can <a href="https://dinozio-design.github.io/prework-study-guide/">see my deployed app here.</a><br>You can also see the associated repo on <a href="https://github.com/dinozio-design/prework-study-guide.git">GitHub</a>. </p>
+                    </figure>
+                </div>
+                <div class ="card" id="card-4">
+                    <figure class="card-cont">
+                        <img class="imgPlace" src="./Assets/Images/IMG_04.JPG" alt="placeholder image">
+                        <button class="cardBox" id="btn-4" data-descr="Double click to see more!" onclick="seeMoreInfo4();">
+                            <h3>Test Runs</h3>
+                        </button>
+                        <p class = "seeMore" id="seeMore-4">I tested out my first assignment before submitting a clean copy. <br>You can <a href="https://dinozio-design.github.io/CH01-test/">see my deployed app here.</a><br>You can also see the associated repo on <a href="https://github.com/dinozio-design/CH01-test.git">GitHub</a>.</p> 
+                    </figure>
+                </div>
+                <div class ="card" id="card-5">
+                    <figure class="card-cont">
+                        <img class="imgPlace" src="./Assets/Images/IMG_05.JPG" alt="placeholder image">
+                        <button class="cardBox" id="btn-5" data-descr="Double click to see more!" onclick="seeMoreInfo5();">
+                            <h3>Sand Box</h3>
+                        </button>
+                        <p class = "seeMore" id="seeMore-5">Here are some premitive experimentation. <br>You can <a href="https://dinozio-design.github.io/activity-0106/">see my deployed app here.</a><br>You can also see the associated repo on <a href="https://github.com/dinozio-design/activity-0106.git">GitHub</a>.</p>
+                    </figure>
+                </div>
             </div>
         </section>
-        <!-- this is a hidden section with more information about each work, each work is clicked, then this section is populated with the sctipt -->
-        <!-- <section>
-            <div class="seeMore" id="seeMore"></div>
-        </section> -->
-        <section class="contactMe" id="contactMe">
-            <div>
-                <h2>Contact Me:</h2>
-                <p>Email me at: <a href="mailto:sam@dinozio.design"> sam@dinozio.design</a></p>
-                <p>By Phone: <a href="tel:+***-678-****">+***-678-****</a></p>
-                <p>GitHub: <a href="https://">https://#</a></p>
+        <section id="contactMe">
+            <h2>Contact Me:</h2>
+            <div class="contactMe">
+                <div class="contactInfo">
+                    <p>Email me at: <a href="mailto:sam@dinozio.design"> sam@dinozio.design</a></p>
+                    <p>By Phone: 1-647-678-****</a></p>
+                    <p>GitHub: <a href="https://github.com/dinozio-design">my GitHub</a></p>
+                </div>  
+                <img src="./Assets/Images/myAvaLookLeft.PNG" alt="My Avatar again">
             </div>
-            <img src="./Assets/Images/myAvaLookLeft.PNG" alt="My Avatar again">
         </section>
     </main>
     <footer>
         <div class="myResume" id="myResume">
             <h4>My Resume:</h4>
-            <p>It is still a work in progress, in the meanwhile feel free to check out my linkedIn <a href="https://">https://</a></p>
+            <p>It is still a work in progress, in the meanwhile feel free to check out my linkedIn at:  <a href="https://linkedin.com">https://linkedin.com</a><br></p>
         </div>
         <p>This web app is brought to you by:<br>© Sam Azimi - 2023 CodeCamp Studen.<br>Confidential and Proprietary. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>

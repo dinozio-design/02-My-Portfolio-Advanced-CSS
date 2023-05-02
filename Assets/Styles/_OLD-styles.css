@@ -1,0 +1,339 @@
+/* setting up the root style */
+*{
+    /* my variables */
+    --main-bordr-color: black;
+    --main-bordr-style: solid;
+    --main-bordr-width: medium;
+    --main-border-radius: 0px;
+    --main-bckgrnd: white;
+    --main-color: darkblue;
+    --card-bckgrnd: lightgrey;
+
+
+    --mobile-bordr-color: black;
+    --mobile-bordr-style: solid;
+    --mobile-bordr-width: Small;
+    --mobile-border-radius: 5x;
+    --mobile-bckgrnd: rgb(246, 244, 241);
+    --mobile-color: rgba(0, 0, 139, 0.779);
+    
+    
+}
+
+/* overall setyle of the document */
+
+html{
+    /* CLASS NOTE: set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+}
+
+body {
+    /* CLASS NOTES: Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 4rem;
+    /* font-size: 4rem; */
+    padding: 20px;
+
+}
+
+h2{
+    font-size: 3rem;
+    padding: 10px 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+header {
+    /* border style */
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+
+    padding: 40px 60px;
+
+    /* background image style */
+    background-image: url(../Images/headder-img.PNG);
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+}
+
+header img{
+    padding: 15px;
+    display: block;
+}
+
+nav{
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav li{
+    display: inline-block;
+    padding: 10px;
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+}
+
+main{
+    display: grid;
+    width: 96%;
+    margin: 2rem auto;
+    
+}
+
+section {
+    padding: 35px;
+}
+
+
+footer{
+    margin: 2.5rem;
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+}
+
+
+/* settin up myWork section with its containers */
+
+.container {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* update to variables */
+.card {
+    border-style: solid;
+    border-width: 1px;
+    margin:1em;
+    padding: -10px;
+    float: left; 
+    width: 25em;
+    height: 25em;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: local;
+
+    background-color:var(--card-bckgrnd);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+}
+
+
+/* fix the code to correct its position */
+.cardBox{
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+    width: 10em;
+}
+.seeMore {
+    display: none;
+    background-color: var(--card-bckgrnd);
+    width: 100%;
+    padding: 1rem;
+}
+
+.contactMe {
+    border-color: var(--main-bordr-color);
+    border-style: var(--main-bordr-style);
+    border-width: var(--main-bordr-width);
+    background: var(--main-bckgrnd);
+    color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contactMe img {
+    position: relative;
+    padding: 0 3em;
+    height: 9em;
+}
+.contactInfo{
+    padding:10px 3em;
+    margin: 20px;
+}
+
+/* id calls */
+#card-1{
+    background-image: url(../Images/IMG_01.JPG);
+    
+}
+#card-2{
+    background-image: url(../Images/IMG_02.JPG);
+    
+}
+#card-3{
+    background-image: url(../Images/IMG_03.JPG);
+    
+}
+#card-4{
+    background-image: url(../Images/IMG_04.JPG);
+    
+}
+#card-5{
+    background-image: url(../Images/IMG_05.JPG);
+    
+}
+
+/* pseudo classes and elements go here */
+
+.brk:hover{
+    font-style: italic;
+}
+
+span[data-descr] {
+    position: relative;
+    cursor: help;
+}
+
+span[data-descr]:hover::after,
+
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 50%;
+  top: 5rem;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  background-image:linear-gradient(  
+    rgba(236, 237, 201, 0.895) 0%,
+  rgba(182, 244, 132, 0.948) 100%);
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+
+
+
+.card:hover{
+    border-color: red;
+    flex-grow: 2;
+    align-self: center;
+}
+
+
+
+button:hover{
+    position: relative;
+    cursor: help;
+    border-color: red;
+}
+
+button:hover::after,
+button:hover::after{
+    content: attr(data-descr);
+    position: absolute;
+    left: 4em;
+    top: 3em;
+    min-width: 200px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #ffffcc;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+}
+button:active{
+    border-color: purple;
+}
+
+/* media querries */
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+    /* nav to stack on top of each other */
+    /* nave with light color background */
+    /* myWOrk container padding and margins */
+    /* smooth transition effects */
+    /* All borders and colors */
+    h1 {
+        text-align: center;
+        padding: 20px 80px; 
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    header {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }  
+    header img{
+        padding: 5rem;
+    }
+    nav{
+        display:block;
+        justify-content: flex-end;
+    }
+ 
+    nav li{
+        display: block;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 3rem;
+        padding: 10px;
+        border-color: var(--mobile-bordr-color);
+        border-style: var(--mobile-bordr-style);
+        border-width: var(--mobile-bordr-width);
+        border-radius: var(--mobile-border-radius);
+        background: var(--mobile-bckgrnd);
+        color: var(--mobile-color);
+}
+    .contactMe {
+        /* image position */
+        /* content centre */
+        justify-content: center;
+    }
+    /* 
+    footer {
+        justify content
+        
+    }
+     */
+    span[data-descr]:focus::after {
+        /* content: attr(data-descr); */
+        position: absolute;
+        left: 60rem;
+        top: 20rem;
+    }
+}
+
